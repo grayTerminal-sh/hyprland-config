@@ -2,6 +2,10 @@
 
 Configuration personnelle Hyprland modulaire avec Hyprlock, Hypridle, Swww, Hyprsunset et double Waybar (top + bottom).
 
+## Screenshot
+
+![Screenshot](assets/screen.jpg)
+
 ## Arborescence
 
 ```bash
