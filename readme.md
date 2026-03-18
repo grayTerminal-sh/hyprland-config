@@ -152,3 +152,6 @@ Recharger Hyprland :
 ```bash
 hyprctl reload
 ```
+
+## Open/close bottom waybar
+- <leader>space
