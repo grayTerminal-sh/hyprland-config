@@ -1,12 +1,12 @@
 # Hyprland + Waybar config (Arch Linux)
 
-Configuration personnelle Hyprland modulaire avec Hyprlock, Hypridle, Swww, Hyprsunset et double Waybar (top + bottom).
+Personal modular Hyprland setup with Hyprlock, Hypridle, Swww, Hyprsunset and a dual Waybar setup (top + bottom).
 
 ## Screenshot
 
 ![Screenshot](assets/screen.jpg)
 
-## Arborescence
+## Tree
 
 ```bash
 ~/.config/hypr
@@ -55,28 +55,27 @@ source = ~/.config/hypr/modules/rules.conf
 ```
 
 ### Modules :
+- animation.conf: window and workspace animations.
+- autostart.conf: services and apps at startup (Waybar, cliphist, kitty scratchpad, etc.).
+- input.conf: FR keyboard layout, touchpad.
+- keybind.conf: keybinds (SUPER + Return for kitty, SUPER + B for Firefox, grim/slurp screenshots, volume, brightness, Waybar scripts…).
+- rules.conf: windowrules for Deezer, kitty-dropterm, Blueman, Waypaper.
+- theme.conf: gaps, borders, opacity, blur, general theme.
 
-- animation.conf : animations des fenêtres et workspaces.
-- autostart.conf : services et applis au démarrage (Waybar, cliphist, kitty scratchpad, etc.).
-- input.conf : layout clavier FR, touchpad. 
-- keybind.conf : keybinds (SUPER + Return pour kitty, SUPER + B pour Firefox, screenshots grim/slurp, volume, brightness, Waybar scripts…). 
-- rules.conf : windowrule pour Deezer, kitty-dropterm, Blueman, Waypaper. 
-- theme.conf : gaps, borders, opacité, blur, thème général. 
 
-### Fichiers annexes :
-- hypridle.conf : gestion de l’inactivité (lock à 5 min, DPMS off à 10 min). 
-- hyprlock.conf : écran de verrouillage custom (horloge, date, batterie, wallpaper). 
-- hyprpaper.conf : fond d’écran. 
-- hyprsunset.conf : température de couleur (night light). 
+### Extra files :
+- hypridle.conf: idle management (lock at 5 min, DPMS off at 10 min).
+- hyprlock.conf: custom lock screen (clock, date, battery, wallpaper).
+- hyprsunset.conf: color temperature (night light).
 
-## Dépendances
+### Dépendancies :
 - Hyprland
 - Hyprlock
 - Hypridle
 - Hyprpaper
 - Hyprsunset
 
-### Bar / notif / wallpaper
+### Bar / notifications / wallpaper
 - waybar
 - swaync
 - swww
@@ -100,7 +99,7 @@ source = ~/.config/hypr/modules/rules.conf
 
 ### wl-clipboard (wl-copy, wl-paste)
 - cliphist
-- jq (pour la capture de la fenêtre active)
+- jq (for activr windows capture)
 
 ### Audio / luminosité
 - pipewire + wireplumber
@@ -111,22 +110,8 @@ source = ~/.config/hypr/modules/rules.conf
 - Adwaita-dark (GTK)
 - Tela-dracula-dark (icônes)
 - JetBrains Mono Nerd Font
-- AlfaSlabOne (font pour l’horloge de Hyprlock)
 
-## Waybar
-Waybar est lancé via modules/autostart.conf : 
 
-```text
-exec-once = waybar -c ~/.config/waybar/config -s ~/.config/waybar/style.css
-exec-once = waybar -c ~/.config/waybar/config-bottom.jsonc -s ~/.config/waybar/style-bottom.css
-Quelques bindings pour contrôler Waybar sont définis dans modules/keybind.conf : 
-```
-
-```text
-bind = SHIFT CTRL, W, exec, ~/.local/bin/waybar.sh
-bind = SUPER, SPACE, exec, ~/.local/bin/waybar-autohide-dock.sh
-Les scripts ~/.local/bin/waybar.sh et ~/.local/bin/waybar-autohide-dock.sh ne sont pas inclus ici : il faut les créer à la main ou adapter selon votre setup.
-```
 ## Installation
 Cloner le repo :
 
