@@ -23,7 +23,7 @@ Configuration personnelle Hyprland modulaire avec Hyprlock, Hypridle, Swww, Hypr
     └── theme.conf
 ```
 
-## Waybar (dans le repo waybar-config) :
+## Waybar [dans le repo waybar-config](https://github.com/grayTerminal-sh/waybar-config) :
 
 ```bash
 ~/.config/waybar
