@@ -113,19 +113,18 @@ source = ~/.config/hypr/modules/rules.conf
 
 
 ## Installation
-Cloner le repo :
+Clone the repo :
 
 ```bash
 git clone https://github.com/<ton-user>/hyprland-config.git ~/Repo/hyprland-config
 ```
-
-Sauvegarder votre config actuelle (optionnel) :
+Backup yout current config :
 
 ```bash
 mv ~/.config/hypr ~/.config/hypr.bak 2>/dev/null || true
 ```
 
-Copier ou symlinker :
+Copy ou symlink :
 ```bash
 mkdir -p ~/.config
 ln -s ~/Repo/hyprland-config/.config/hypr ~/.config/hypr
@@ -133,7 +132,7 @@ ln -s ~/Repo/hyprland-config/.config/hypr ~/.config/hypr
 cp -r ~/Repo/hyprland-config/.config/hypr ~/.config/hypr
 (Optionnel) Copier votre config Waybar dans ~/.config/waybar.
 ```
-Recharger Hyprland :
+Reload Hyprland :
 ```bash
 hyprctl reload
 ```
